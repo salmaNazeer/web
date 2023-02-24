@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>change content on mouseover</title>
+</head>
+<body>
+<center>
+<h1 id="heading">parrot</h1><img src="parrot.jpg" id="img" width="250px">
+</center>
+<script>
+document.getElementById("img").addEventListener("mouseover",mouseOver);
+document.getElementById("img").addEventListener("mouseout",mouseOut);
+function mouseOver(){
+document.getElementById("img").src="peacock.jpg";
+document.getElementById("heading").innerHTML="peacock";
+}
+function mouseOut(){
+document.getElementById("img").src="parrot.jpg";
+document.getElementById("heading").innerHTML="parrot";
+}
+</script>
+</body>
+</html>
