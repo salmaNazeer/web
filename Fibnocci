@@ -1,0 +1,21 @@
+DECLARE
+   n NUMBER := 10; -- Change this to the position for which you want to find the Fibonacci number.
+   fib1 NUMBER := 0;
+   fib2 NUMBER := 1;
+   fibn NUMBER;
+BEGIN
+   IF n = 0 THEN
+      fibn := 0;
+   ELSIF n = 1 THEN
+      fibn := 1;
+   ELSE
+      FOR i IN 2..n LOOP
+         fibn := fib1 + fib2;
+         fib1 := fib2;
+         fib2 := fibn;
+      END LOOP;
+   END IF;
+   
+   DBMS_OUTPUT.PUT_LINE('Fibonacci number at position ' || n || ' is ' || fibn);
+END;
+/
