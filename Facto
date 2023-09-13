@@ -1,0 +1,11 @@
+CREATE OR REPLACE PROCEDURE CalculateFactorial(
+   num IN NUMBER,
+   result OUT NUMBER
+) AS
+BEGIN
+   result := 1;
+   FOR i IN 1..num LOOP
+      result := result * i;
+   END LOOP;
+END CalculateFactorial;
+/￼Enter
